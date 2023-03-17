@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercício</title>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+    <header>
+            <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div id="ver">
+
+            <p>
+                Insira seu nome: <input type="text" name="nome" id="txtfnome">
+            </p>
+            <p>
+              Insira o ano de nascimento:  <input type="number" name="anonas" id="txtanonas">
+            </p>
+            <p>
+                <input type="radio" name="fgen" id="fmas">
+                <label for="fmas">Masculino</label>
+                <input type="radio" name="fgen" id="ffem">
+                <label for="ffem">Feminino</label>
+            
+                <input type="button" value="Verificar" id="verificar" onclick="verificar()"></p>
+        
+        </div>
+        <div id="res">
+
+        </div>
+
+    </section>
+    <footer>
+            <p>&copy;CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+   
+</body>
+</html>

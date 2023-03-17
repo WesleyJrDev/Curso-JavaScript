@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Nacionalidade</title>
+</head>
+<body>
+<style>
+  
+    div#resposta {  
+        text-align: center;
+        width: 600px;
+        height: 400px;
+        margin: 1px;
+        background-color: black;
+        font-family: Arial;
+        color: beige;
+
+        
+    }
+    input#inp {
+        color: rgb(252, 252, 252);
+        background-color: black;
+        cursor:pointer;
+        margin: 1px;
+    }
+
+    body{
+        background-color: rgb(146, 139, 34);
+    }
+</style>
+
+    <h1> Especifique a idade e o país de origem abaixo: </h1>
+    Meu país de origem é: <input type="text" name="txtpais" id="txtpais">
+    <p>Minha idade é: <input type="number" name="txtage" id="txtage"></p>
+    <input id="inp" type="button" value="Verificar aptidão" onclick="ver()">
+   
+    
+    <div id="resposta"></div>
+    <script>
+        
+        function ver() {    
+          
+        var resposta = window.document.querySelector ('div#resposta')
+        var país = (txtpais.value)
+        var idade = (txtage.value)
+
+        resposta.innerHTML = `<p>Você nasceu em <strong>${país}</strong> e tem ${idade} anos, então   </p>`
+        
+            
+            if (país == 'Brasil' && idade >= 18 ) {
+                resposta.innerHTML += '<p>você é <strong> Brasileiro</strong> e maior de idade,<br> está apto a entrar no pais </p>'
+            } else {
+                resposta.innerHTML += 'você é <strong>Extrangeiro</strong> ou menor de idade,<br> não está apto a entrar no país'
+                
+            
+            }
+        }
+    </script>
+    
+</body>
+</html>

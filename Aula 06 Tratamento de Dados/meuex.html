@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu próprio exercício</title>
+</head>
+<style>
+    body
+    {
+        background-color: black;
+        color: antiquewhite;
+       
+    }
+</style>
+<body>
+<h1>Treinando</h1>
+
+<script>
+
+   
+    window.confirm('Gostaria de saber seu saldo? ')
+    var saldo = 10000
+    
+    document.writeln(`Seu saldo total é de: ${saldo}<br/>`)
+
+    var saque = window.prompt(`Seu saldo total é de: ${saldo}
+    Qual valor gostaria de sacar?`)
+
+    document.writeln(`confirma o saque de ${saque}<br/>`)
+
+    var saldorest = saldo - saque
+
+    window.alert(`Seu saldo agora é de ${saldorest}`)
+
+    document.writeln(`Seu saldo agora é de ${saldorest}`)
+
+</script>
+
+    
+</body>
+</html>

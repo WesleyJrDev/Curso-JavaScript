@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando</title>
+    <style>
+        div#agora{
+            margin-top: 50px;
+        }
+        
+    </style>
+</head>
+ 
+<body id="corpo">
+
+    <h1>Esse é o meu treinamento de interação em JS</h1>
+    <div id='inter'>Passe o <strong> mouse </strong> ou <strog> clique </strong>!!!</div>
+
+
+
+    <div id='agora'>Agora passe o <strong> mouse </strong> aqui e <strog> clique </strong>!!!</div>
+
+    
+
+    
+
+    <script>
+        var i = window.document.getElementById('inter')
+        i.addEventListener('click', clicar)
+        i.addEventListener('mouseenter', entrar)
+        i.addEventListener('mouseout', sair)
+        var corpo = window.document.getElementById('corpo')
+        corpo.addEventListener('click', clicar)
+
+        function clicar(){
+            i.innerText = 'Clicou!'
+            i.style.background ='red'
+            i.style.width = '200px'
+            i.style.color = 'black'
+
+        }
+        function entrar(){
+            i.innerText = 'Entrou!'
+            i.style.color = 'green'
+        }
+        function sair(){
+            i.innerHTML = 'Passe o <strong> mouse </strong> ou <strog> clique </strong>!!!'
+            i.style.background = 'white'
+            i.style.color = 'black'
+        }
+
+        var a = window.document.getElementById('agora')
+        a.addEventListener('click', clicar2)
+        a.addEventListener('mouseenter', entrar2)
+        a.addEventListener('mouseout', sair2)
+
+        function clicar2(){
+            a.innerText = 'Eita!'
+            a.style.background = 'red'
+            corpo.style.background = 'black'
+        }
+        function entrar2(){
+            a.innerText = 'brincadeira, não clica!!'
+        }
+        function sair2(){
+            a.innerText = 'Ufa..'
+            a.style.background = 'white'
+            corpo.style.background = 'white'
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

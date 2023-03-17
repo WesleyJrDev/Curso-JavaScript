@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Nacionalidade</title>
+</head>
+<body>
+    <h1>Insira o PAIS de origem!</h1>
+ Pais de origem: <input type="text" name="txtpais" id="txtpais">
+   <input type="button" value="Verificar" onclick="Verif()">
+   <div id="resp">
+
+   </div>
+   <script>
+    function Verif() {
+
+        var resp = window.document.querySelector ('div#resp')
+        var pais = (txtpais.value)
+
+        resp.innerHTML = `<p> Seu pais de origem é <strong> ${pais} </strong></p>`
+
+        if (pais == 'Brasil') {
+            resp.innerHTML += '<p>Você é Brasileiro</p>'
+        }else {
+            resp.innerHTML += '<p>Você é Extrangeiro</p>'
+        }
+    }
+   </script>
+
+    
+</body>
+</html>

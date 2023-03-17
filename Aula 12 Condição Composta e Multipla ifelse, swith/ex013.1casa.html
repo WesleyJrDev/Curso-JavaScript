@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mes e Hora</title>
+</head>
+<body>
+    
+
+    <h1> Data e Hora</h1>
+    <div id="hora">
+        
+    </div>
+    
+    <script>
+        var h = document.getElementById ('hora')
+        var data = new Date ()
+        var hora = data.getHours ()
+        var min = data.getMinutes ()
+        var d = data.getDay ()
+        var m = data.getMonth ()
+        var ano = data.getFullYear()
+        var dn = data.getDate()
+
+        var mes = 0
+        var mes = 0
+
+        switch (m) {
+
+            case 0:
+            mes ='Janeiro'
+            break
+            case 1:
+            mes='Fevereiro'
+            break
+            case 2:
+            mes='Março'
+            break
+            case 3:
+            mes='Abril'
+            break
+            case 4:
+            mes='Maio'
+            break
+            case 5:
+            mes='Junho'
+            break
+            case 6:
+            mes='Julho'
+            break
+            case 7:
+            mes='Agosto'
+            break
+            case 8:
+            mes='Setembro'
+            break
+            case 9:
+            mes='Outubro'
+            break
+            case 10:
+            mes='Novembro'
+            break
+            case 11:
+            mes='Desembro'
+            break
+
+}
+
+        switch (d) {
+
+            case 0:
+            dia='domingo'
+            break
+            case 1:
+            dia='segunda'
+            break
+            case 2:
+            dia='terça'
+            break
+            case 3:
+            dia='quarta'
+            break
+            case 4:
+            dia='quinta'
+            break
+            case 5:
+            dia='sexta'
+            break
+            case 6:
+            dia='sabado'
+            break
+        }
+
+        h.innerHTML = `Agora são exatamente <strong> ${hora} horas e ${min} minutos, do dia ${dn} (${dia}-feira), de ${mes} de ${ano}.`
+
+    </script>
+</body>
+</html>
